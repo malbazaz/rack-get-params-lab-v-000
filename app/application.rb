@@ -24,7 +24,7 @@ class Application
       item_to_be_added = req.params["item"]
         if @@items.include?(item_to_be_added)
           binding.pry
-          @@items << item_to_be_added
+          @@cart << item_to_be_added
           resp.write "added #{item_to_be_added}"
         else
           resp.write "We don't have that item"
