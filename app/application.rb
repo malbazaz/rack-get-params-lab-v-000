@@ -23,7 +23,7 @@ class Application
     elsif req.path.match(/add/)
       item_to_be_added = req.params["item"]
         if @@items.include?(item_to_be_added)
-
+          binding.pry
           @@items << item_to_be_added
           resp.write "added #{item_to_be_added}"
         else
